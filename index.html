@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Timer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="floating-image"></div>
+    <div class="card card-menu active" id="menuScreen">
+      <div class="logo">Timer</div>
+      <div class="menu-title">Choose mode</div>
+      <button class="menu-button" id="timerModeBtn">Timer</button>
+      <button class="menu-button" id="customModeBtn">Custom</button>
+    </div>
+
+    <div class="card card-panel" id="timerScreen">
+      <div class="top-bar">
+        <button class="back-button" data-target="menuScreen">Back</button>
+        <div class="panel-title">Timer</div>
+      </div>
+      <div class="display-box">
+        <span class="time-value" id="timerDisplay">00:00</span>
+      </div>
+      <div class="controls">
+        <button class="control-button" id="startTimerBtn">Start</button>
+        <button class="control-button" id="pauseTimerBtn">Pause</button>
+        <button class="control-button" id="resetTimerBtn">Restart</button>
+      </div>
+    </div>
+
+    <div class="card card-panel" id="customScreen">
+      <div class="top-bar">
+        <button class="back-button" data-target="menuScreen">Back</button>
+        <div class="panel-title">Custom Countdown</div>
+      </div>
+      <div class="display-box custom">
+        <label class="custom-label" for="customInput">Set time (minutes)</label>
+        <div class="custom-input-row">
+          <input type="number" id="customInput" min="0" placeholder="e.g. 5" />
+          <select id="customUnit">
+            <option value="minutes">Minutes</option>
+            <option value="hours">Hours</option>
+            <option value="days">Days</option>
+          </select>
+        </div>
+        <span class="time-value" id="customDisplay">00:00</span>
+      </div>
+      <div class="controls">
+        <button class="control-button" id="startCustomBtn">Start</button>
+        <button class="control-button" id="pauseCustomBtn">Pause</button>
+        <button class="control-button" id="resetCustomBtn">Restart</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
